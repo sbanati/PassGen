@@ -44,16 +44,13 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#additions">Additions</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -91,12 +88,14 @@ No method was specified so I was able to approach the problem at my discretion.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-https://sbanati.github.io/passGenerator/ 
-If you want to start this on your local machine, open the web application through vs.code. 
+ <h3>For end users</h3> 
+https://sbanati.github.io/passGenerator/  <br>
+
 
 
 
 ### Installation
+For anyone wanting to contribute <br>
 
 1. Clone the repo
    ```sh
@@ -148,25 +147,18 @@ If you want to start this on your local machine, open the web application throug
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This part of the readme is where community involvement can happen! Normally I would have my Github setup to where anyone can fork and push or make an issue, but 
+I am still learning that stuff. In the mean time this is how the section would look like. Pretty much from the Template. <br>
 
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
+3. Commit your Changes (`git commit -m 'Added some Goated new feature'`)
+4. Push to the Branch (`git push origin feature/NewFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,20 +175,14 @@ Project Link: https://github.com/sbanati/PassGen
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 References:
-https://dev.to/envoy_/150-badges-for-github-pnk#skills (for badges)
-https://www.flaticon.com/free-icon/password_9177799 (for logo)
+* https://dev.to/envoy_/150-badges-for-github-pnk#skills (for badges)
+* https://www.flaticon.com/free-icon/password_9177799 (for logo)
+* https://github.com/othneildrew/Best-README-Template (best readme template, given to me by the Grader from challenge 1!😊)
+
+
+
 
