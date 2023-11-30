@@ -1,6 +1,14 @@
 // Assignment code here
 
 
+const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+const number = '0123456789';
+const symbol = '@#$%^&*()_+|}{[]></-=“';
+const min_Password_Length = 8;
+const max_Password_Length = 128;
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate"); //red button
 
@@ -8,24 +16,55 @@ var generateBtn = document.querySelector("#generate"); //red button
 //We just created this
 function generatePassword() {
 
-    console.log('lalalalla the button was clicked');
+  // These are the prompts // Scopes
+const length = prompt(" Enter Password Length between 8 and 128: ");
 
+// Makes it so if you hit cancel before making a choice you get a cancel message.
+// I tried if else statement to prevent the second alert from showing up when hitting cancel,
+// but this made the length variable inside the block and broke the password generator. 
+// Instead I added return to exit early and made sure pass length was defined outside the block.
+if (length === null) {
+  alert('You cancelled the process.☹️ I will be here when you are ready to try again. 😊')
+  return;
+} 
+
+// Valididation for password length 
+const passwordLength = parseInt(length);
+  if (
+    isNaN(passwordLength) ||
+    passwordLength < min_Password_Length ||
+    passwordLength > max_Password_Length
+  ) 
+  {
+      alert('You good bruh? 🤡 The password has to be between 8-128 characters 🤡BOZOOOOOO');
+      return;
+    
+    }
+
+    
+// Follow up y/n prompts 
+// useUpperCase is a variable representing the boolean True/False statment of the users
+// choice to include uppercase letters. The upperCase is a const string of the charactrers.
+// These useVariables are storing the users choice. 
+const useUpperCase = confirm(" 😎 Do you want Uppercase letters my G?😎 ");
+const useLowerCase = confirm(" 👑 Do you want Lowercase letters my gender neutral royalty? 👑 ");
+const useNumber = confirm(" 🐱 Do you want to add numbers my little kitten?🐱 ");
+const useSymbol = confirm( " 🏆 Do you want to use symbols champ? 🏆 ");
 
 
     
 // Code I think I need to write. 
 // Based on Acceptance Criteria 
 
-//1. Prompt the user for password choices 
-//    a. Password length = 8 to 128
-//    b. Lowercase, uppercase, numbers, special characters
-//2.  We need Validation of the input. 
+// connect the data from the const strings to the boolean use variables
+//2.  We need Validation of the input.
 //3.  Display the password that we generated on the page.
 
 
 
 
-    return 'The generated password will go here.';
+
+  return 'The generated password will go here.';
 }
 
 
