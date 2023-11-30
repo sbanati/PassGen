@@ -5,8 +5,8 @@ const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 const number = '0123456789';
 const symbol = '@#$%^&*()_+|}{[]></-=“';
-const min_Password_Length = 8;
-const max_Password_Length = 128;
+const minPasswordLength = 8;
+const maxPasswordLength = 128;
 
 
 // Get references to the #generate element
@@ -32,8 +32,8 @@ if (length === null) {
 const passwordLength = parseInt(length);
   if (
     isNaN(passwordLength) ||
-    passwordLength < min_Password_Length ||
-    passwordLength > max_Password_Length
+    passwordLength < minPasswordLength ||
+    passwordLength > maxPasswordLength
   ) 
   {
       alert('You good bruh? 🤡 The password has to be between 8-128 characters 🤡BOZOOOOOO');
@@ -69,7 +69,6 @@ if (characters === '') {
 }
 
 
-
 // Generating the password from the user specifications 
 // For loop randomly picks characters from the character pool
 let generatedPassword = '';
@@ -86,7 +85,6 @@ generatedPassword += characters.charAt(randomIndex); // Adds a random character 
 return generatedPassword;
 
 }
-
 
 
 // Write password to the #password input
@@ -109,3 +107,18 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+/* I worked along side Dan from the class. We wrote our own code and simply spoke out loud what we thought our next steps 
+should be and trial and errored things on our own machines. We had the general structure down last weekend, but after the collab,
+majority of our code was done solo. We started with the mini student project and then shifted to the challenge. 
+We spoke out loud and broke down what the starter code was giving us and tried to find out what we needed to do. 
+This was a big help as when I first saw the code I freaked out because I had no clue what was going on,
+but calming down and approaching this line by line helped a lot. */
+
+/* I also collaborated with Jason. We both met after finishing our code to compare/contrast and see a different prespective. 
+We narrated our thought processes and then we shared our thoughts on each others code. We gave positive feedback and critique. 
+This was helpful to see if we needed to make any imrpovements and to also see how other coders problem solve. I learned a lot 
+from this type of collaboration.*/
+
+
+/* References: Ask BCS Learning Assistant. I also asked the Xpert learning assistant when I was stuck or to explain what certain 
+lines did. I also used the lecture videos to go over methods we learned. */
