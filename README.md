@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/sbanati/PassGen">  
-    <img src="passLogo.png" alt="Logo" width="80" height="80">
+    <img src="screenshots/passLogo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h1 align="center">The GOAT Password Generator</h1>
@@ -24,7 +24,7 @@
     
   <a href="https://sbanati.github.io/passGenerator/">View Demo</a>
     
-  <img src="screenShot.png" alt="Logo">
+  <img src="screenshots/screenShot.png" alt="password generator big red button">
 
   </p>
 </div>
@@ -118,7 +118,7 @@ For anyone wanting to contribute <br>
 
 <h3>Screenshot provided below of the code for this project.</h3>
 
-<img src="codeScreenShot.png" alt="vscode script.js">
+<img src="screenshots/codeScreenShot.png" alt="vscode script.js">
  
 
 
