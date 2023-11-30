@@ -1,6 +1,6 @@
 // Assignment code here
 
-
+// Defines the character attributes and password length requirements.
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
 const number = '0123456789';
@@ -12,23 +12,23 @@ const max_Password_Length = 128;
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate"); //red button
 
-// We are not generating any value in this function right now.
-//We just created this
+
 function generatePassword() {
 
-  // These are the prompts // Scopes
+// Password length prompt with acceptable range //
 const length = prompt(" Enter Password Length between 8 and 128: ");
 
-// Makes it so if you hit cancel before making a choice you get a cancel message.
-// I tried if else statement to prevent the second alert from showing up when hitting cancel,
-// but this made the length variable inside the block and broke the password generator. 
-// Instead I added return to exit early and made sure pass length was defined outside the block.
+// Checks if the user has cancelled the password password length prompt. 
+// If they do hit cancel, the alert message will display and then exit the prompt window.
 if (length === null) {
   alert('You cancelled the process.☹️ I will be here when you are ready to try again. 😊')
   return;
 } 
 
-// Valididation for password length 
+
+// Valididation for password length
+// Checks if the password length is not a number.
+//If the input is invalid, it will show an alert and exit the password generator. 
 const passwordLength = parseInt(length);
   if (
     isNaN(passwordLength) ||
@@ -42,10 +42,7 @@ const passwordLength = parseInt(length);
     }
 
     
-// Follow up y/n prompts 
-// useUpperCase is a variable representing the boolean True/False statment of the users
-// choice to include uppercase letters. The upperCase is a const string of the charactrers.
-// These useVariables are storing the users choice. 
+// Follow up y/n prompts for user preferences //
 const useUpperCase = confirm(" 😎 Do you want Uppercase letters my G?😎 ");
 const useLowerCase = confirm(" 👑 Do you want Lowercase letters my gender neutral royalty? 👑 ");
 const useNumber = confirm(" 🐱 Do you want to add numbers my little kitten?🐱 ");
@@ -54,12 +51,7 @@ const useSymbol = confirm( " 🏆 Do you want to use symbols champ? 🏆 ");
 
     
 // This builds the pool of characters to pick from that the user chose.
-// This ties the 2 above sections together. Transfering the const string data into the 
-// variables titled characters. Characters is the container, and if the boolean is TRUE 
-// then the data from the const string is added to the characters variable. 
-//Concat operator += is used to build on the characeter variable , so it adds to the existing 
-// values instead of just overwriting them.  
-
+// Includes the variables if user chooses yes.   
 let characters = '';
 
 if (useUpperCase) characters += upperCase;  
@@ -69,7 +61,8 @@ if (useSymbol) characters += symbol;
 
 
 // Validation for at least one character type being selected. 
-
+// Checks if character types are selected bu the user.
+// If character string is empty, alert will appear and exit the password generation.
 if (characters === '') {
   alert( ' 🤡 Hey Bozo! 🤡 select at least ONE character type. 🤡');
   return;
@@ -77,38 +70,28 @@ if (characters === '') {
 
 
 
-// Generating the password from the user specifications using for loop.
-// Math floor picks a random decimal that is then rounded to a hole number by math.random. Then
-// the random # is multiplied by the characters.length string picking a random number in the string. (its basically picking a random number in the char.legnth string)
-// then this info is being stored in the const randomIndex. 
-// Next line takes the value from random index to pick a character from the character string.
-// Then we add that value += (concat to generatedPassword string)
+// Generating the password from the user specifications 
+// For loop randomly picks characters from the character pool
 let generatedPassword = '';
 
 for (let i=0; i < passwordLength; i++) {
 
 const randomIndex = Math.floor(Math.random() * characters.length);  
-generatedPassword += characters.charAt(randomIndex);               
+generatedPassword += characters.charAt(randomIndex); // Adds a random character from the pool to the password.               
                                                                      
 }
   
 
-
- // Displays the password in console
-console.log('Generated Password: ' , generatedPassword);
-
-
-  
+ // Returns the generatedPassword then it can be displayed. 
 return generatedPassword;
 
 }
 
 
 
-
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword(); // <--what is this? We need to make this function.
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");// Card on screen
 
   passwordText.value = password; // Display line
@@ -116,7 +99,8 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); // click button to call write password function
+// click button to call write password function
+generateBtn.addEventListener("click", writePassword); 
 
 
 
@@ -125,13 +109,3 @@ generateBtn.addEventListener("click", writePassword); // click button to call wr
 
 
 
-
-// writePassword func is waiting for a value 
-// from generatePassword 
-// and then that value is stored into password 
-// and then password is stored into passwordText.value
-// That line tests that the password text will appear in the box
-// Event listener is working, connection is good. At the end 
-// we are supposed to return a generated password at the end of  code 
-// So whatever generated password is will be stored in a variable
-// and then called by the return line. 
