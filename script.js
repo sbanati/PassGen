@@ -3,8 +3,8 @@
 // Defines the character attributes and password length requirements.
 const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-const number = '0123456789';
-const symbol = '@#$%^&*()_+|}{[]></-=“';
+const numericCase = '0123456789';
+const specialSymbol = '@#$%^&*()_+|}{[]></-=“';
 const minPasswordLength = 8;
 const maxPasswordLength = 128;
 
@@ -45,25 +45,25 @@ const passwordLength = parseInt(length);
 // Follow up y/n prompts for user preferences //
 const useUpperCase = confirm(" 😎 Do you want Uppercase letters my G?😎 ");
 const useLowerCase = confirm(" 👑 Do you want Lowercase letters my gender neutral royalty? 👑 ");
-const useNumber = confirm(" 🐱 Do you want to add numbers my little kitten?🐱 ");
-const useSymbol = confirm( " 🏆 Do you want to use symbols champ? 🏆 ");
+const useNumericCase = confirm(" 🐱 Do you want to add numbers my little kitten?🐱 ");
+const useSpecialSymbol = confirm( " 🏆 Do you want to use special symbols champ? 🏆 ");
 
 
     
 // This builds the pool of characters to pick from that the user chose.
 // Includes the variables if user chooses yes.   
-let characters = '';
+let selectedCharacters = '';
 
-if (useUpperCase) characters += upperCase;  
-if (useLowerCase) characters += lowerCase;
-if(useNumber) characters += number;
-if (useSymbol) characters += symbol;
+if (useUpperCase) selectedCharacters += upperCase;  
+if (useLowerCase) selectedCharacters += lowerCase;
+if (useNumericCase) selectedCharacters += numericCase;
+if (useSpecialSymbol) selectedCharacters += specialSymbol;
 
 
 // Validation for at least one character type being selected. 
 // Checks if character types are selected bu the user.
 // If character string is empty, alert will appear and exit the password generation.
-if (characters === '') {
+if (selectedCharacters === '') {
   alert( ' 🤡 Hey Bozo! 🤡 select at least ONE character type. 🤡');
   return;
 }
@@ -71,18 +71,18 @@ if (characters === '') {
 
 // Generating the password from the user specifications 
 // For loop randomly picks characters from the character pool
-let generatedPassword = '';
+let customizedPassword = '';
 
 for (let i=0; i < passwordLength; i++) {
 
-const randomIndex = Math.floor(Math.random() * characters.length);  
-generatedPassword += characters.charAt(randomIndex); // Adds a random character from the pool to the password.               
+const randomIndex = Math.floor(Math.random() * selectedCharacters.length);  
+customizedPassword += selectedCharacters.charAt(randomIndex); // Adds a random character from the pool to the password.               
                                                                      
 }
   
 
  // Returns the generatedPassword then it can be displayed. 
-return generatedPassword;
+return customizedPassword;
 
 }
 
@@ -107,12 +107,15 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-/* I worked along side Dan from the class. We wrote our own code and simply spoke out loud what we thought our next steps 
-should be and trial and errored things on our own machines. We had the general structure down last weekend, but after the collab,
-majority of our code was done solo. We started with the mini student project and then shifted to the challenge. 
-We spoke out loud and broke down what the starter code was giving us and tried to find out what we needed to do. 
-This was a big help as when I first saw the code I freaked out because I had no clue what was going on,
-but calming down and approaching this line by line helped a lot. */
+/* I worked along side Dan from class. We spoke out loud and broke down the starter code that was giving to us 
+and tried to find out what we needed to do. This was a big help as when I first saw the code I freaked out because 
+I had no clue what was going on,but calming down and approaching this line by line helped a lot. We wrote our own 
+code and simply spoke out loud what we thought our next steps should be and trial and errored things on our own 
+machines slowly. As we coded individually we took turns sharing our screens as we moved to code blocks or when we 
+were trial and erroring when lines didnt work. We did a similar thing to the breakout rooms but we focused on our 
+own code and just worked the problem out loud and shared screens when using our words was difficult since its easier 
+to see what is going on.
+
 
 /* I also collaborated with Jason. We both met after finishing our code to compare/contrast and see a different prespective. 
 We narrated our thought processes and then we shared our thoughts on each others code. We gave positive feedback and critique. 
