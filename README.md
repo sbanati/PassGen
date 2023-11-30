@@ -15,14 +15,14 @@
 <h1 align="center">The GOAT Password Generator</h1>
 
   <p align="center">
-    Generate a password based off of criteria you selected. 
+    A random password generator that adapts to the users choices. 
     <br />
     <a href="https://github.com/sbanati/PassGen"><strong>Explore the docs »</strong></a>
     <br />
     <br />
 
     
-  <a href="https://github.com/github_username/repo_name">View Demo</a>
+  <a href="https://sbanati.github.io/passGenerator/">View Demo</a>
     
   <img src="screenShot.png" alt="Logo">
 
@@ -62,9 +62,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This project is a Javascript challenge where I was given a starter code of a random password generator. The user in mind can be anyone,
+but the instructions specified for an employee to create a random password with varying security levels. 
+<br><br>
+I was given an HTML/CSS/and Java file that had the clean responsive UI seen. I was tasked with coding the logic for the password generator.<br>
+No method was specified so I was able to approach the problem at my discretion. 
 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,7 +91,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Click on the deployed link to use the password generator web application. 
+https://sbanati.github.io/passGenerator/ 
 If you want to start this on your local machine, open the web application through vs.code. 
 
 
