@@ -77,23 +77,32 @@ if (characters === '') {
 
 
 
+// Generating the password from the user specifications using for loop.
+// Math floor picks a random decimal that is then rounded to a hole number by math.random. Then
+// the random # is multiplied by the characters.length string picking a random number in the string. (its basically picking a random number in the char.legnth string)
+// then this info is being stored in the const randomIndex. 
+// Next line takes the value from random index to pick a character from the character string.
+// Then we add that value += (concat to generatedPassword string)
+let generatedPassword = '';
 
+for (let i=0; i < passwordLength; i++) {
 
-
-
-// Code I think I need to write. 
-// Based on Acceptance Criteria 
-
-// connect the data from the const strings to the boolean use variables
-//2.  We need Validation of the input.
-//3.  Display the password that we generated on the page.
-
-
-
-
-
-  return 'The generated password will go here.';
+const randomIndex = Math.floor(Math.random() * characters.length);  
+generatedPassword += characters.charAt(randomIndex);               
+                                                                     
 }
+  
+
+
+ // Displays the password in console
+console.log('Generated Password: ' , generatedPassword);
+
+
+  
+return generatedPassword;
+
+}
+
 
 
 
