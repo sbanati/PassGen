@@ -116,9 +116,11 @@ For anyone wanting to contribute <br>
 <br>
 <br>
 
-<h3>Screenshot provided below of the code for this project.</h3>
+<h3>Screenshot provided below of the code for this project with extended notes with explanations.</h3> <br>
+<br> I realize this method is not feasible for future projects as codes will get much bigger, but for this project its ok 
+<br> <br>
 
-<img src="screenshots/codeScreenShot.png" alt="vscode script.js">
+<img src="screenshots/passGenCodeCommented.png" alt="vscode script.js"> 
  
 
 
