@@ -53,6 +53,34 @@ const useSymbol = confirm( " 🏆 Do you want to use symbols champ? 🏆 ");
 
 
     
+// This builds the pool of characters to pick from that the user chose.
+// This ties the 2 above sections together. Transfering the const string data into the 
+// variables titled characters. Characters is the container, and if the boolean is TRUE 
+// then the data from the const string is added to the characters variable. 
+//Concat operator += is used to build on the characeter variable , so it adds to the existing 
+// values instead of just overwriting them.  
+
+let characters = '';
+
+if (useUpperCase) characters += upperCase;  
+if (useLowerCase) characters += lowerCase;
+if(useNumber) characters += number;
+if (useSymbol) characters += symbol;
+
+
+// Validation for at least one character type being selected. 
+
+if (characters === '') {
+  alert( ' 🤡 Hey Bozo! 🤡 select at least ONE character type. 🤡');
+  return;
+}
+
+
+
+
+
+
+
 // Code I think I need to write. 
 // Based on Acceptance Criteria 
 
