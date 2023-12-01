@@ -50,6 +50,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#additions">Additions</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contributing">Acknowledgement</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -164,6 +165,16 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- ACKNOWLEDGEMENT -->
+## Acknowledgement
+* Practiced pair programming with Dan.
+* Worked with Jason to compare and contrast our projects and see differing methods. 
+
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
